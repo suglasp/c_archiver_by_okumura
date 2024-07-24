@@ -2,7 +2,7 @@
 ### ar (Archiver) is a compressed archive utility developed by Prof. [Haruhiko Okumura](https://en.wikipedia.org/wiki/Haruhiko_Okumura)
 
 This repository, is created to preserve the precursor to the today known [LZSS](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Storer%E2%80%93Szymanski) and [LHA](https://en.wikipedia.org/wiki/LHA_(file_format)) compression algorithm standards.\
-The source code found here is public created cody by Haruhiko Okumura between the end of the 1980's and beginnen of the 1990's.\
+The source code found here is public created cody by Haruhiko Okumura between the end of the 1980's and beginnen of the 1990's.
 
 In order to compile, you need [Dosbox](https://www.dosbox.com/) or [Dosbox Staged](https://www.dosbox-staging.org/),\
 and also the compiler Borland Turbo C (v2.01 or 3.0).\
@@ -23,7 +23,7 @@ ar002 uses LHA file format.
 ar's compression is based on LZ77 with static Huffman coding.\
 ar001 by default uses a 4K history buffer, like LHA's "lh4" method.\
 ar002 by default uses an 8K history buffer, like "-lh5-".\
-It's unclear whether the ar compression methods are 100% compatible with the standard LHA methods, but they're at least very close.\
+It's unclear whether the ar compression methods are 100% compatible with the standard LHA methods, but they're at least very close.
 
 The CRC-16 algorithm used by ar001 is different from the one used by ar002 and LHA.\
 It seems to be equivalent to the one called "CRC-16/IBM-SDLC" by [CRC RevEng](https://reveng.sourceforge.io/crc-catalogue/16.htm).
