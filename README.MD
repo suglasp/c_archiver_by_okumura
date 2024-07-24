@@ -26,7 +26,7 @@ ar002 by default uses an 8K history buffer, like "-lh5-".\
 It's unclear whether the ar compression methods are 100% compatible with the standard LHA methods, but they're at least very close.\
 
 The CRC-16 algorithm used by ar001 is different from the one used by ar002 and LHA.\
-It seems to be equivalent to the one called "CRC-16/IBM-SDLC" by CRC RevEng.
+It seems to be equivalent to the one called "CRC-16/IBM-SDLC" by [CRC RevEng](https://reveng.sourceforge.io/crc-catalogue/16.htm).
 
 ## Archive extensions
 Neither version of ar has a default or recommended filename extension.\
