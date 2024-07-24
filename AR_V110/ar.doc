@@ -1,0 +1,153 @@
+                                 AR
+                             version 1.1
+
+                      Written by    Haruhiko Okumura
+                     Modified by    Terran Melconian
+
+1.0  WHY AR
+2.0  USAGE
+    2.1  Add
+    2.2  Extract
+    2.3  Replace
+    2.4  Delete
+    2.5  Print
+    2.6  List
+3.0  PROGRAMMING
+
+
+---------------------------------------------------------------------
+
+
+1.0  WHY AR
+
+Why should you use AR?
+
+  * AR is not copyrighted and can be distributed with your software
+
+  * Complete source code is included
+
+  * Compression is comparable with that of the major archivers such as ZIP,
+     ARJ, and LHA.  Look at the following results:
+
+    COMMAND  ZIP    31854  (PKZIP)
+    COMMAND  ARJ    31902  (ARJ)
+    COMMAND  SQZ    32023  (SQZ)
+    COMMAND  LZH    32130  (LHA)
+**  COMMAND  AR     32140  (AR)         **
+    COMMAND  PAK    33578  (PAK)
+    COMMAND  COM    34273  (PKLITE)
+    COMMAND  CO_    38208  (COMPRESS)
+    COMMAND  ARC    40945  (PKPAK)
+    COMMAND  ZOO    41805  (ZOO)
+    COMMAND  COM    52925  (NONE)
+
+    DATA     SQZ    33371  (SQZ)
+    DATA     ZIP    33483  (PKZIP)
+    DATA     ARJ    33953  (ARJ)
+    DATA     LZH    35963  (LHA)
+**  DATA     AR     35963  (AR)         **
+    DATA     PAK    37239  (PAK)
+    DATA     ARC    45259  (PKPAK)
+    DATA     ZOO    45833  (ZOO)
+    DATA     TX_    46939  (COMPRESS)
+    DATA     TXT    97372  (NONE)
+
+    MULT     SQZ    78033  (SQZ)
+**  MULT     AR     79290  (AR)         **
+    MULT     LZH    79293  (LHA)
+    MULT     ARJ    80784  (ARJ)
+    MULT     ZIP    84985  (PKZIP)
+    MULT     PAK    96190  (PAK)
+    MULT     ARC   120333  (PKPAK)
+    MULT     ZOO   125598  (ZOO)
+    MULT           246816  (TOTAL SIZE 105 FILES)
+
+
+  * Lousy documentation, but the program itself it good!
+
+2.1  ADD
+
+    The ADD command allows you to add files to an existing AR archive or to
+create a new archive.  The syntax is:
+
+AR A <arfile> <file> [<file>...]
+
+where <file> is the files you want to add.  Note that if you try to add a
+files which is already in the archive the file will be updated, not added
+again.  If you wish to preserve both versions of the file, you must use a
+different name.
+
+2.2  EXTRACT
+
+    There are two extract options, E and X.  The syntax for them is
+
+AR [E/X] <arfile>
+
+X will extract the files in the archive to the directory from which they
+were stored.  E will extract all files in the archive to the current
+directory, regardless of whether they came from different directories
+originally.
+
+2.3  REPLACE
+
+    Use Replace when you wish to update files in the archive.  If you
+specify a file with the R option which is not already in the file, nothing
+will happen, so you can add new versions of all the files currently in an
+archive by specifying *.* for the file specification.  The full syntax is:
+
+AR R <arfile> <file> [<file>...]
+
+
+2.4  DELETE
+
+    This option will remove files from an AR archive.  The syntax is:
+
+AR D <arfile> <file> [<file>...]
+
+
+2.5  PRINT
+
+    This option will print the contents of an AR archive to the screen.  It
+can be redirected with the > operators.  The syntax is:
+
+AR P <arfile> [<file>...]
+
+The default is all files.
+
+2.6  LIST
+
+    This option will give a list of all the files stored in an AR archive.
+The syntax is:
+
+AR L <arfile> [<file>...]
+
+The default is all files.
+
+3.0  PROGRAMMING
+
+    The complete C source for AR is provided.  For the files which I have
+modified, I have included the original with a .BAK extention.  If you find
+some bugs, just fix 'em and distribute a new version with your name on the
+list of people who made modifications.  I don't think there are any bugs at
+the present but I did not do extensive testing.
+
+---------------------------------------------------------------------
+
+                                 SUMMARY:
+
+
+ar -- compression archiver -- written by Haruhiko Okumura
+                        modifications by Terran Melconian
+Usage: ar command archive [file ...]
+Commands:
+   a: Add files to archive (replace if present)
+   e: Extract files from archive
+   x: Extract files with path
+   r: Replace files in archive
+   d: Delete files from archive
+   p: Print files on standard output
+   l: List contents of archive
+If no files are named, all files in archive are processed,
+   except for commands 'a' and 'd'
+You may copy, distribute, and rewrite this program freely.
+
