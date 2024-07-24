@@ -5,7 +5,7 @@ This repository, is created to preserve the precursor to the today known [LZSS](
 The source code found here is public created cody by Haruhiko Okumura between the end of the 1980's and beginnen of the 1990's.
 
 In order to compile, you need [Dosbox](https://www.dosbox.com/) or [Dosbox Staged](https://www.dosbox-staging.org/),\
-and also the compiler Borland Turbo C (v2.01 or 3.0).\
+and also the compiler Borland Turbo C (v2.01 or 3.0).
 
 'ar' has nothing in common with the Unix ar tool.
 
